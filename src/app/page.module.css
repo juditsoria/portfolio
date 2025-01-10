@@ -1,3 +1,102 @@
+
+/* Estilos globales para la home */
+body {
+  background: linear-gradient(to right, #BB377D, #FBD3E9);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal de la página */
+.home-container {
+  padding: 50px 20px;
+  color: #fff;
+}
+
+/* Sección de introducción (Foto + Descripción) */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+  text-align: center;
+}
+
+.photo-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sección de habilidades */
+.skills {
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  text-align: center;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Efecto hover para habilidades */
+.skill:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.skill:hover p {
+  color: #BB377D;
+  transition: color 0.3s ease;
+}
+
+
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);

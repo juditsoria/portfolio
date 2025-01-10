@@ -1,95 +1,95 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
 
-export default function Home() {
+// Aquí va tu foto de perfil y tus habilidades
+const Home = () => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="home-container">
+      {/* Sección de introducción */}
+      <div className="intro-section text-center">
+        <div className="photo-container mb-4">
+          <img 
+            src="https://via.placeholder.com/200" // Cambia la URL por la de tu foto real
+            alt="Tu foto"
+            className="profile-photo"
+          />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        
+        <div className="description">
+          <h1 className="display-4 text-dark">¡Hola, soy Judit!</h1>
+          <p className="lead text-muted">
+            Desarrolladora Full-Stack con un enfoque en la Inteligencia Artificial y la creación de soluciones tecnológicas innovadoras. 
+            Con experiencia en backend, frontend y desarrollo de aplicaciones completas. ¡Aquí es donde la magia ocurre!
+          </p>
+        </div>
+      </div>
+
+      {/* Sección de habilidades técnicas */}
+      <div className="skills py-5">
+        <h2 className="text-center mb-4">Mis Habilidades Técnicas</h2>
+        <div className="skills-list d-flex flex-wrap justify-content-center">
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="Python" className="skill-icon" />
+            <p className="text-center">Python</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="Django" className="skill-icon" />
+            <p className="text-center">Django</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="React" className="skill-icon" />
+            <p className="text-center">React</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="Flask" className="skill-icon" />
+            <p className="text-center">Flask</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="Next.js" className="skill-icon" />
+            <p className="text-center">Next.js</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="AWS" className="skill-icon" />
+            <p className="text-center">AWS</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="SQLite" className="skill-icon" />
+            <p className="text-center">SQLite</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="SQLAlchemy" className="skill-icon" />
+            <p className="text-center">SQLAlchemy</p>
+          </div>
+          <div className="skill-card">
+            <img src="https://via.placeholder.com/50" alt="Git" className="skill-icon" />
+            <p className="text-center">Git</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Sección de habilidades blandas */}
+      <div className="soft-skills py-5">
+        <h2 className="text-center mb-4">Habilidades Blandas</h2>
+        <div className="soft-skills-list d-flex flex-wrap justify-content-center">
+          <div className="soft-skill-card">
+            <i className="bi bi-person-lines-fill" style={{ fontSize: '3rem' }}></i>
+            <p className="text-center">Trabajo en equipo</p>
+          </div>
+          <div className="soft-skill-card">
+            <i className="bi bi-lightbulb" style={{ fontSize: '3rem' }}></i>
+            <p className="text-center">Creatividad</p>
+          </div>
+          <div className="soft-skill-card">
+            <i className="bi bi-graph-up-arrow" style={{ fontSize: '3rem' }}></i>
+            <p className="text-center">Orientada a resultados</p>
+          </div>
+          <div className="soft-skill-card">
+            <i className="bi bi-clock" style={{ fontSize: '3rem' }}></i>
+            <p className="text-center">Gestión del tiempo</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
