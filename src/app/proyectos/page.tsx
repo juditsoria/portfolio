@@ -1,6 +1,6 @@
 import React from 'react';
+import './proyectos.css'; 
 
-// Define la interfaz para un repositorio
 interface Repo {
     id: number;
     name: string;
@@ -9,10 +9,9 @@ interface Repo {
     language: string;
 }
 
-// Define un tipo para manejar la respuesta que puede ser un array de repositorios o un error
 type ReposData = Repo[] | { error: string };
 
-// Aquí definimos los nombres de los repositorios que quieres mostrar
+// Aquí definimos los nombres de los repositorios
 const selectedReposNames = [
     "Cocktails_and_Dishes", 
     "practicas-Python",
@@ -22,7 +21,6 @@ const selectedReposNames = [
     "spain-fs-pt-67-JA-JR"
 ];
 
-// Este es un componente de servidor en Next.js 13
 const Projects = async ({ params }: { params: { username: string } }) => {
   const username = params.username;
   let reposData: Repo[] = [];
@@ -37,7 +35,7 @@ const Projects = async ({ params }: { params: { username: string } }) => {
       return <p className="alert alert-danger">Error: {err.message}</p>;
   }
 
-  // Filtrar repositorios seleccionados
+
   const filteredRepos = reposData.filter((repo) =>
     selectedReposNames.includes(repo.name)
   );
@@ -45,10 +43,7 @@ const Projects = async ({ params }: { params: { username: string } }) => {
   return (
       <div className="container mt-5">
           <h1 className="text-center mb-4 text-dark">Mis Proyectos</h1>
-          
-          {/* Card Contenedor Principal */}
           <div className="card shadow-lg p-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)', borderRadius: '15px' }}>
-              {/* Fila con fondo degradado y alineación de cards */}
               <div className="row py-4 d-flex justify-content-center" style={{ background: 'linear-gradient(to right, #BB377D, #FBD3E9)', borderRadius: '10px', flexWrap: 'wrap' }}>
                   {filteredRepos.map((repo) => (
                       <div className="col-md-4 mb-4" key={repo.id} style={{ display: 'flex', justifyContent: 'center' }}>
