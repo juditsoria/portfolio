@@ -1,76 +1,135 @@
+/* Contenedor */
 .container {
-  max-width: 1200px;
+  max-width: 800px; /* Tamaño ajustado */
   margin: 0 auto;
   padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite el scroll vertical */
+  max-height: 1000px; /* Altura limitada con scroll */
 }
+
+/* Títulos */
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Estilos de las tarjetas (cards) */
 .card {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #080107; /* Fondo oscuro */
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  color: white; /* Color blanco para el texto */
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
+
+/* Estilo de las filas (rows) */
 .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px 0;
+  border-radius: 10px;
 }
 
-.col-md-4 {
-  display: flex;
-  justify-content: center;
-}
-
+/* Estilos del cuerpo de las tarjetas */
 .card-body {
   padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 10px;
 }
 
+/* Estilo de los títulos de las tarjetas */
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #005f73;
+  color: #17c9ed; /* Azul claro */
 }
 
+/* Estilo de los subtítulos de las tarjetas */
 .card-subtitle {
   font-size: 1rem;
-  color: #888;
+  color: #050404; /* Blanco para los subtítulos */
   margin-bottom: 10px;
 }
 
+/* Estilo del texto de las tarjetas */
 .card-text {
   font-size: 1rem;
-  color: #333;
+  color: #060404; /* Blanco para el texto */
   margin-bottom: 20px;
 }
 
+/* Estilo de los enlaces de los botones */
 a.btn {
   text-align: center;
   padding: 8px 20px;
   border-radius: 5px;
-  border: 2px solid #005f73;
-  color: #005f73;
+  border: 2px solid #17c9ed; /* Borde azul */
+  color: #17c9ed;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 a.btn:hover {
-  background-color: #005f73;
+  background-color: #17c9ed;
   color: #fff;
-  border-color: #005f73;
+  border-color: #17c9ed;
 }
-.row {
-  background: linear-gradient(to right, #BB377D, #FBD3E9);
-  border-radius: 10px;
+
+/* Lista de ítems en la experiencia */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Estilo para el item de la experiencia */
+.item {
+  background-color: #080107; /* Fondo oscuro */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(171, 107, 107, 0.1);
+  color: white;
+  font-size: 1.90rem; /* Texto más grande */
+}
+
+/* Título de la experiencia */
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #17c9ed; /* Azul claro */
+  margin-bottom: 5px;
+}
+
+/* Institución y año */
+.institution {
+  font-size: 1rem;
+  color: #fff; /* Blanco */
+  margin-bottom: 5px;
+}
+
+.year {
+  font-size: 1rem;
+  color: #bbb; /* Color más claro para la fecha */
 }

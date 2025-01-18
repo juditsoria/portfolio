@@ -1,13 +1,22 @@
+/* Contenedor */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .experience-item {
-  margin-bottom: 20px;
+  max-width: 800px; /* Tamaño ajustado */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite el scroll vertical */
+  max-height: 1000px; /* Altura limitada con scroll */
+}
+
+/* Títulos */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -15,6 +24,77 @@ h3 {
   margin-bottom: 10px;
 }
 
+/* Estilos de las tarjetas (cards) */
+.card {
+  background-color: #ffffff; /* Fondo blanco sólido */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  color: black; /* Color de texto ajustado */
+  margin-bottom: 20px; /* Espaciado entre las tarjetas */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo de las filas (rows) */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+/* Estilos del cuerpo de las tarjetas */
+.card-body {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 10px;
+}
+
+/* Estilo de los títulos de las tarjetas */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #005f73; /* Color ajustado */
+}
+
+/* Estilo de los subtítulos de las tarjetas */
+.card-subtitle {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto de las tarjetas */
+.card-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los enlaces de los botones */
+a.btn {
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 2px solid #005f73;
+  color: #005f73;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a.btn:hover {
+  background-color: #005f73;
+  color: #fff;
+  border-color: #005f73;
+}
+
+/* Lista de ítems en la experiencia */
 ul {
   list-style-type: disc; 
   padding-left: 20px;
@@ -24,46 +104,33 @@ li {
   margin-bottom: 5px;
 }
 
-.title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
- 
-  .list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+/* Estilo para el item de la experiencia */
+.item {
+  background-color: #080107; /* Fondo oscuro */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(171, 107, 107, 0.1);
+  color: white;
+  font-size: 1.25rem; /* Texto más grande que el tamaño base */
+}
 
-  .item {
-    background-color: #fff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+/* Título de la experiencia */
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #17c9ed; /* Color destacado */
+  margin-bottom: 5px;
+}
 
-  .experience-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #005f73;
-    margin-bottom: 5px;
-  }
-  
+/* Institución y año */
+.institution {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
 
-  .institution {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
-  }
-
-  .year {
-    font-size: 0.9rem;
-    color: #888;
-  }
-  
+.year {
+  font-size: 0.9rem;
+  color: #888;
+}

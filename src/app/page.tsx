@@ -34,8 +34,8 @@ const Home = () => {
         </div>
 
         <div className="description">
-          <h1 className="display-4 text-dark">¡Hola, soy Judit!</h1>
-          <p className="lead text-muted">
+          <h1 className="title display-4">¡Hola, soy Judit!</h1>
+          <p className=" description lead ">
             Desarrolladora Full-Stack con un enfoque en la Inteligencia Artificial y la creación de soluciones tecnológicas innovadoras.
             Con experiencia en backend, frontend y desarrollo de aplicaciones completas. ¡Aquí es donde la magia ocurre!
           </p>

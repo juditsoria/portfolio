@@ -1,49 +1,52 @@
-
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Habilitar el scroll si el contenido es largo */
+  max-height: 1000px; /* Limitar la altura para activar el scroll */
+}
 
-  .title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .item {
-    background-color: #fff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .study-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #005f73;
-    margin-bottom: 5px;
-  }
-  
-  .institution {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .year {
-    font-size: 0.9rem;
-    color: #888;
-  }
-  
+.title {
+  font-size: 3rem; /* Aumento del tamaño para coincidir con la experiencia */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  background-color: #080107; /* Fondo oscuro como en la experiencia */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(171, 107, 107, 0.1); /* Sombra ligera */
+  color: white;
+  font-size: 1.90rem; /* Aumento del tamaño de la fuente */
+}
+
+.study-title {
+  font-size: 2.5rem; /* Tamaño más grande para los títulos de los estudios */
+  font-weight: bold;
+  color: #17c9ed; /* Color similar al de la experiencia */
+  margin-bottom: 5px;
+}
+
+.institution {
+  font-size: 1rem;
+  color: #fff; /* Blanco para resaltar sobre fondo oscuro */
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.year {
+  font-size: 20px;
+  color: #bbb; /* Color más claro para la fecha */
+}

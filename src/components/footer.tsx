@@ -1,27 +1,18 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+
 
 const Footer = () => {
   return (
-    <footer className="footer text-center py-3">
-      <div>
-        <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">
-          {/* <FontAwesomeIcon 
-            icon={faGithub} 
-            className="footer-icon" 
-            size="1x" // El tamaño ahora es igual al de las habilidades
-          /> */}
-        </a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">
-          {/* <FontAwesomeIcon 
-            icon={faLinkedin} 
-            className="footer-icon" 
-            size="1x" // El tamaño ahora es igual al de las habilidades
-          /> */}
-        </a>
-      </div>
-      <p>&copy; 2025 Judit. Todos los derechos reservados.</p>
+    <footer className="text-white text-center py-3 fixed-bottom">
+      <a href="https://www.linkedin.com/in/judit-alvarez-rubio-ba0707234/" target="_blank" rel="noopener noreferrer">
+        Linkedin: https://www.linkedin.com/in/judit-alvarez-rubio-ba0707234/
+      </a>
+      <br />
+      <a href="https://github.com/juditsorianer noreferrer">
+      Github: https://github.com/juditsoria
+      </a>
+      
     </footer>
   );
 };

@@ -19,7 +19,8 @@ const selectedReposNames = [
     "gestor_libros",
     "i003-cerem-back",
     "spain-fs-pt-67-JA-JR"
-];
+    ];
+
 
 const Projects = async ({ params }: { params: { username: string } }) => {
   const username = params.username;
@@ -33,6 +34,7 @@ const Projects = async ({ params }: { params: { username: string } }) => {
       reposData = await res.json();
   } catch (err: any) {
       return <p className="alert alert-danger">Error: {err.message}</p>;
+      
   }
 
 
@@ -43,14 +45,14 @@ const Projects = async ({ params }: { params: { username: string } }) => {
   return (
       <div className="container mt-5">
           <h1 className="text-center mb-4 text-dark">Mis Proyectos</h1>
-          <div className="card shadow-lg p-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)', borderRadius: '15px' }}>
-              <div className="row py-4 d-flex justify-content-center" style={{ background: 'linear-gradient(to right, #BB377D, #FBD3E9)', borderRadius: '10px', flexWrap: 'wrap' }}>
+          <div className="card shadow-lg p-4" >
+              <div className="row py-4 d-flex justify-content-center">
                   {filteredRepos.map((repo) => (
-                      <div className="col-md-4 mb-4" key={repo.id} style={{ display: 'flex', justifyContent: 'center' }}>
-                          <div className="card shadow-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', borderRadius: '8px', width: '300px' }}>
+                      <div className="col-md-4 mb-4" key={repo.id} >
+                          <div className="card shadow-lg" >
                               <div className="card-body">
-                                  <h5 className="card-title text-dark">{repo.name}</h5>
-                                  <h6 className="card-subtitle mb-2 text-muted">{repo.language}</h6>
+                                  <h5 className="card-title">{repo.name}</h5>
+                                  <h6 className="card-subtitle mb-2">{repo.language}</h6>
                                   <p className="card-text text-dark">{repo.description || 'Sin descripción disponible.'}</p>
                                   <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary mt-2">
                                       Ver en GitHub
