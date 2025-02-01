@@ -39,6 +39,16 @@ const Experience: React.FC<ExperiencesProps> = ({ experience }) => {
 };
 const experience = [
   {
+    title: 'Full-Stack Developer',
+    institution: 'Inspiranza - Zenenti',
+    description: [
+      "Desarrollar y optimizar funciones clave en una app de meditación con React Native y Node.js, asegurando que los usuarios puedan descubrir contenido de meditación adaptado a sus preferencias.",
+      "Colaborar en la integración de características multidispositivo, asegurando una experiencia fluida.",
+      "Trabajar con un equipo multidisciplinario en un entorno ágil, donde cada iteración mejora la app de manera continua y basada en feedback directo de los usuarios."
+    ],
+    year: '2025'
+  },
+  {
     title: 'Desarrolladora Backend',
     institution: 'No Country',
     description: [

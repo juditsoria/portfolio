@@ -25,20 +25,16 @@ const Home = () => {
     <div className="home-container">
       {/* Sección de introducción */}
       <div className="intro-section text-center">
-        <div className="photo-container mb-4">
-          <img
-            src="https://via.placeholder.com/200" // Cambia la URL por la de tu foto real
-            alt="Tu foto"
-            className="profile-photo"
-          />
-        </div>
-
+        
         <div className="description">
           <h1 className="title display-4">¡Hola, soy Judit!</h1>
+         
+
           <p className=" description lead ">
             Desarrolladora Full-Stack con un enfoque en la Inteligencia Artificial y la creación de soluciones tecnológicas innovadoras.
             Con experiencia en backend, frontend y desarrollo de aplicaciones completas. ¡Aquí es donde la magia ocurre!
           </p>
+         
         </div>
       </div>
 
@@ -53,6 +49,10 @@ const Home = () => {
           <div className="skill-card">
             <FontAwesomeIcon icon={faFlask} className="skill-icon" size="3x" />
             <p className="text-center">Flask</p>
+          </div>
+          <div className="skill-card">
+            <FontAwesomeIcon icon={faPython} className="skill-icon" size="3x" />
+            <p className="text-center">Django</p>
           </div>
           <div className="skill-card">
             <FontAwesomeIcon icon={faPython} className="skill-icon" size="3x" />

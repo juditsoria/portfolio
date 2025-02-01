@@ -18,9 +18,6 @@ const Navbar = () => {
             <a className="nav-link" href="/estudios">Educación</a>
           </li>
           <li className="nav-item mx-4">
-            <a className="nav-link" href="/login">Blog personal</a>
-          </li>
-          <li className="nav-item mx-4">
             <a className="nav-link" href="/contacto">Contacto</a>
           </li>
         </ul>

@@ -21,16 +21,35 @@ const Contacto: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Formulario enviado:', formData);
-    alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
+  
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        alert('Correo enviado con éxito');
+        setFormData({ name: '', email: '', message: '' }); // Reinicia el formulario
+      } else {
+        alert('Hubo un problema al enviar el correo');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error al enviar el mensaje');
+    }
   };
 
+  
   return (
-    <div className="contacto-container">
-    <h2>Contacto</h2>
     <div className="card">
+      <h2>Contacto</h2>
       <div className="personal-data">
         <h3>Mis Datos Personales</h3>
         <ul>
@@ -41,7 +60,7 @@ const Contacto: React.FC = () => {
         </ul>
       </div>
   
-      {/* <div className="contact-form">
+      <div className="contact-form">
         <h3>Envíame un Mensaje</h3>
         <form onSubmit={handleSubmit}>
           <div>
@@ -81,9 +100,9 @@ const Contacto: React.FC = () => {
   
           <button type="submit">Enviar Mensaje</button>
         </form>
-      </div> */}
+      </div>
     </div>
-  </div>
+  
   
   );
 };

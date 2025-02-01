@@ -9,7 +9,7 @@ const Footer = () => {
         Linkedin: https://www.linkedin.com/in/judit-alvarez-rubio-ba0707234/
       </a>
       <br />
-      <a href="https://github.com/juditsorianer noreferrer">
+      <a href="https://github.com/juditsoria">
       Github: https://github.com/juditsoria
       </a>
       
