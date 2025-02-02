@@ -4,7 +4,7 @@ import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
 import Navbar from "../components/navbar";
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
-import Footer from '@/components/footer';
+
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="d-flex flex-column min-vh-100">
           <Navbar />
           <main className="flex-grow-1">{children}</main>
-          <Footer />
+         
         </div>
       </body>
     </html>

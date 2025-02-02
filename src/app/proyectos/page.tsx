@@ -44,24 +44,27 @@ const Projects = async ({ params }: { params: { username: string } }) => {
   );
 
   return (
-              <div className="row py-4 d-flex justify-content-center">
-                <h1 className="text-center mb-4">Mis Proyectos</h1>
-                  {filteredRepos.map((repo) => (
-                      <div className="col-md-4 mb-4" key={repo.id} >
-                          <div className="card shadow-lg" >
-                              <div className="card-body">
-                                  <h5 className="card-title">{repo.name}</h5>
-                                  <h6 className="card-subtitle mb-2">{repo.language}</h6>
-                                  <p className="card-text text-dark">{repo.description || 'Sin descripción disponible.'}</p>
-                                  <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary mt-2">
-                                      Ver en GitHub
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  ))}
-              </div>
-     
+    <div className="container">
+  <h1 className="text-center mb-4">Mis Proyectos</h1>
+  <div className="row">
+    {filteredRepos.map((repo, index) => (
+      <div className="col-md-4 mb-4" key={repo.id}>
+        <div className="card shadow-lg">
+          <div className="card-body">
+            <h5 className="card-title">{repo.name}</h5>
+            <h6 className="card-subtitle mb-2">{repo.language}</h6>
+            <p className="card-text text-dark">{repo.description || 'Sin descripción disponible.'}</p>
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary mt-2">
+              Ver en GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
   );
 };
 

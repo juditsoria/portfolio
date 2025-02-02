@@ -57,6 +57,14 @@ const Contacto: React.FC = () => {
           <li><strong>Correo Electrónico:</strong> juditrubio27@gmail.com</li>
           <li><strong>Teléfono:</strong> +34 629 282 152</li>
           <li><strong>Ubicación:</strong> España</li>
+          <li><strong>Github: </strong>
+          <a href="https://github.com/juditsoria">
+           https://github.com/juditsoria
+      </a></li>
+          <li><strong>Linkedin: </strong>
+          <a href="https://www.linkedin.com/in/judit-alvarez-rubio-ba0707234/" target="_blank" rel="noopener noreferrer">
+          https://www.linkedin.com/in/judit-alvarez-rubio-ba0707234/
+      </a></li>
         </ul>
       </div>
   
