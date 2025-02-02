@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@raulcanodev/react-github-dots": "^1.1.55",
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
     "next": "15.1.4",

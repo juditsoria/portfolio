@@ -10,6 +10,7 @@ h1 {
 }
 /* Estilos de las tarjetas */
 .card {
+  height: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -18,8 +19,9 @@ h1 {
   margin-bottom: 100px;
 }
 .card-body {
-  max-width: 300px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido dentro de la tarjeta esté distribuido de forma uniforme */
   background-color: rgba(244, 244, 244, 0.5); /* Fondo gris claro con 50% de transparencia */
 
 }
@@ -34,7 +36,11 @@ h1 {
   font-weight: bold;
  color: #380808;
 }
-
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
 /* Estilo de los enlaces de los botones */
 a.btn {
   text-align: center;
