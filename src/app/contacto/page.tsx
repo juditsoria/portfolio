@@ -68,7 +68,7 @@ const Contacto: React.FC = () => {
         </ul>
       </div>
   
-      <div className="contact-form">
+      {/* <div className="contact-form">
         <h3>Envíame un Mensaje</h3>
         <form onSubmit={handleSubmit}>
           <div>
@@ -108,7 +108,7 @@ const Contacto: React.FC = () => {
   
           <button type="submit">Enviar Mensaje</button>
         </form>
-      </div>
+      </div> */}
     </div>
   
   
