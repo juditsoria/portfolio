@@ -54,7 +54,7 @@ const Home = () => {
           creatividad.  ¡Conectemos y trabajemos juntos en la creación de algo 
           increíble!
           </p>
-
+            <a className='btn btn-danger' href="https://drive.google.com/file/d/1CoOQlZxga-jiCINto1QVnbx_uzcT0sHL/view?usp=drive_link" >descargar CV </a>
         </div>
       </div>
 
