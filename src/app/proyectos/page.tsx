@@ -29,7 +29,7 @@ const manualDescriptions: { [key: string]: string } = {
   "spain-fs-pt-67-JA-JR": "Repositorio del proyecto Fullstack...",
 };
 
-// 💡 Ahora el `fetch` se hace antes del return
+
 async function getRepos(): Promise<Repo[]> {
   try {
     const res = await fetch(`https://api.github.com/users/juditsoria/repos`);
