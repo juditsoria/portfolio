@@ -29,7 +29,6 @@ const manualDescriptions: { [key: string]: string } = {
   "spain-fs-pt-67-JA-JR": "Repositorio del proyecto Fullstack...",
 };
 
-// Modifica el tipo de params para alinearse con Next.js 15
 const Projects = async ({ params }: { params: { username: string } }) => {
   const username = "juditsoria";
   let reposData: Repo[] = [];
