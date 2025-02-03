@@ -29,8 +29,18 @@ const manualDescriptions: { [key: string]: string } = {
   "spain-fs-pt-67-JA-JR": "Repositorio del proyecto Fullstack...",
 };
 
-const Projects = async ({ params }: { params: { username: string } }) => {
+interface PageProps {
+  params: {
+    username: string;
+  };
+}
+
+export default async function Projects({ params }: PageProps) {
+  // Si quieres usar el username dinámico proveniente de params, descomenta la siguiente línea:
+  // const { username } = params;
+  // Por ahora se mantiene un valor fijo para facilitar las pruebas:
   const username = "juditsoria";
+  
   let reposData: Repo[] = [];
 
   try {
@@ -80,6 +90,4 @@ const Projects = async ({ params }: { params: { username: string } }) => {
       </div>
     </div>
   );
-};
-
-export default Projects;
+}
