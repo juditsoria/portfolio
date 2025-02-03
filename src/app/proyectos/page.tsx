@@ -29,22 +29,24 @@ const manualDescriptions: { [key: string]: string } = {
   "spain-fs-pt-67-JA-JR": "Repositorio del proyecto Fullstack...",
 };
 
+// Modifica el tipo de params para alinearse con Next.js 15
+const Projects = async ({ params }: { params: { username: string } }) => {
+  const username = "juditsoria";
+  let reposData: Repo[] = [];
 
-async function getRepos(): Promise<Repo[]> {
   try {
-    const res = await fetch(`https://api.github.com/users/juditsoria/repos`);
+    const res = await fetch(`https://api.github.com/users/${username}/repos`);
     if (!res.ok) {
       throw new Error("No se pudieron cargar los repositorios");
     }
-    return await res.json();
-  } catch (err) {
-    console.error("Error al obtener repos:", err);
-    return [];
+    reposData = await res.json();
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      return <p className="alert alert-danger">Error: {err.message}</p>;
+    }
+    return <p className="alert alert-danger">Error desconocido</p>;
   }
-}
 
-const Projects = async () => {
-  const reposData = await getRepos();
   const filteredRepos = reposData.filter((repo) =>
     selectedReposNames.includes(repo.name)
   );
