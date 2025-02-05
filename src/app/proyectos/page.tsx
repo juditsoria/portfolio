@@ -29,13 +29,8 @@ const manualDescriptions: { [key: string]: string } = {
   "spain-fs-pt-67-JA-JR": "Repositorio del proyecto Fullstack...",
 };
 
-interface PageProps {
-  params: {
-    username: string;
-  };
-}
 
-export default async function Projects({ params }: PageProps) {
+export default async function Projects() {
   // Si quieres usar el username dinámico proveniente de params, descomenta la siguiente línea:
   // const { username } = params;
   // Por ahora se mantiene un valor fijo para facilitar las pruebas:
