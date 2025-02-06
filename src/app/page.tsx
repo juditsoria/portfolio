@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import {
   faPython,
   faReact,
